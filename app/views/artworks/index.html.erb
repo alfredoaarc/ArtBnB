@@ -14,23 +14,4 @@
 
 <h2>Those are the artworks that match your search</h2>
 
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    Breakfast
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    Lunch
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-    Dinner
-  </div>
 </div>
-
-
-<% @artworks.each do |artwork| %>
-<%= link_to artwork_path(artwork) do %>
-<p><%= artwork.title %><p>
-<% end %>
-<% end %>
