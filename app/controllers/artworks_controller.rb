@@ -7,6 +7,11 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
   end
   # POST /artwork
+  def search
+
+  end
+
+  private
 
   def artwork_params
     params.require(:artwork).permit(
