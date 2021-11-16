@@ -1,5 +1,4 @@
 class ArtworksController < ApplicationController
-
   def index
     @artworks = Artwork.all
   end
@@ -9,4 +8,14 @@ class ArtworksController < ApplicationController
   end
   # POST /artwork
 
+  def artwork_params
+    params.require(:artwork).permit(
+      :title,
+      :description,
+      :photo,
+      :location,
+      :price,
+      :category
+    )
+  end
 end
