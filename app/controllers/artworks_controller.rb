@@ -5,14 +5,8 @@ class ArtworksController < ApplicationController
   end
 
   def show
-    @artwork = Artwork.find(artwork_params)
+    @artwork = Artwork.find(params[:id])
   end
   # POST /artwork
-
-  private
-
-  def artwork_params
-    params.require(:artwork).permit(:title, :location)
-  end
 
 end
