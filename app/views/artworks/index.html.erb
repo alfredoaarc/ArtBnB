@@ -7,7 +7,7 @@
   </div>
 
   <div class="mt-3">
-  <%= render 'search_form', artwork: @artwork %> <a class="btn" href="#">See all artworks</a>
+  <%= render 'search_form', artwork: @artwork %> <a class="btn btn-filled" href="#">See all artworks</a>
   </div>
   <%# <form novalidate="novalidate" class="simple_form" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
     <div class="simple_form">
@@ -17,25 +17,16 @@
       </button>
     </div>
   </form> %>
+<div class="mt-5">
+  <p>These are the artworks that match your search</p>
 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
 
-
-
-
-
-
-
-  <h3>Those are the artworks that match your search</h3>
-
-  <div class="">
     <% @artworks.each do |artwork| %>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <%= link_to artwork_path(artwork) do %>
-            <p><%= artwork.title %><p>
-          <% end %>
-        </div>
-      </div>
+
+    <%= render 'card', artwork: artwork %>
+
     <% end %>
+
   </div>
+</div>
