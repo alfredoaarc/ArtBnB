@@ -1,6 +1,6 @@
 class Rental < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :artwork_id
+  belongs_to :user
+  belongs_to :artwork
 
   validates :start_time, :end_time, presence: true
 end
