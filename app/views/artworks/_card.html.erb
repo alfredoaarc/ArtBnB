@@ -1,6 +1,6 @@
 <%= link_to artwork_path(artwork) do %>
         <div class="card bg-dark text-white" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path artwork.photo.key %>)">
-        <span class="position-absolute badge rounded-pill bg-primary m-1">Category</span>
+        <span class="position-absolute badge rounded-pill bg-primary m-1"><%= artwork.category %></span>
           <div class="card-img-overlay d-flex justify-content-between align-items-end">
               <h5 class="card-title"><%= artwork.title %><h5>
 
