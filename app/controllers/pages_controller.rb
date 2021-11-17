@@ -1,8 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
   def home
-  end
-
-  def artwork_params
-    params.require(:article).permit(:title, :body, :photo)
   end
 end
