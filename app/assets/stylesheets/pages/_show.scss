@@ -1,0 +1,25 @@
+.show-img-box {
+  height: 58vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.artwork-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+}
+
+.p {
+  text-align: justify;
+}
+
+.h4 {
+  text-align: end;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}

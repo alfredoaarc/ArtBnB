@@ -1,13 +1,10 @@
-
 <div class="container">
-  <div class="card-trip">
-    <%= render 'card', artwork: @artwork %>
-    <div class= "card-info">
-      <h2><%=@artwork.title%></h2>
-      <p><%= @artwork.description %></p>
-    </div>
-      <div class="card-price">
-        <h2> <%=@artwork.price %></h2>
-      </div>
+    <h2><%=@artwork.title%></h2>
+    <p><%= @artwork.description %></p>
+  <div class="d-flex flex-row-reverse bd-highlight">
+    <h4>Price <%=@artwork.price %>€/ Day</h4>
+  </div>
+  <div class="show-img-box">
+    <%= cl_image_tag @artwork.photo.key, class: "artwork-img"%>
   </div>
 </div>
