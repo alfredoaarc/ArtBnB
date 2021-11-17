@@ -12,12 +12,15 @@
   </head>
 
   <body>
-    <%= render "components/navbar" %>
+    <% unless @skip_navbar %>
+      <%= render partial: 'components/navbar' %>
+    <% end %>
 
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "components/footer" %>
-
+        <% unless @skip_footer %>
+      <%= render partial: 'components/footer' %>
+    <% end %>
   </body>
 </html>
