@@ -15,10 +15,9 @@
     <% unless @skip_navbar %>
       <%= render partial: 'components/navbar' %>
     <% end %>
+    <%= render "components/flashes" %>
 
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
         <% unless @skip_footer %>
       <%= render partial: 'components/footer' %>
     <% end %>

@@ -1,10 +1,10 @@
-        <div class="card bg-dark text-white">
-        <span class="position-absolute badge rounded-pill bg-primary m-1">Category</span>
-            <%= link_to artwork_path(artwork) do %>
-            <%= cl_image_tag artwork.photo.key, class:'card-img-top', height: 150, width: 150, crop: :fill %>
+<%= link_to artwork_path(artwork) do %>
+        <div class="card bg-dark text-white" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path artwork.photo.key %>)">
+        <span class="position-absolute badge rounded-pill bg-primary m-1"><%= artwork.category %></span>
           <div class="card-img-overlay d-flex justify-content-between align-items-end">
               <h5 class="card-title"><%= artwork.title %><h5>
-            <% end %>
+
             <p class="card-text"><%= artwork.price %>€ / Day</p>
           </div>
       </div>
+<% end %>
