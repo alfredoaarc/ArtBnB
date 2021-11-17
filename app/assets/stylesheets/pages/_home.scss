@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+
+.left-div {
+  height: 100vh;
+}
+.right-div {
+  background-image: url('https://res.cloudinary.com/novapixels/image/upload/v1637062968/ArtBnB/oneisha-lee-r3WFKMR9zzI-unsplash_fzkj8q.jpg');
+  background-size: cover;
+}
+.index-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+}
+.signup {
+  text-decoration: underline;
+}
+.signin {
+  color: black;
+}
