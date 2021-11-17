@@ -2,6 +2,8 @@
   height: 58vh;
   overflow: hidden;
   width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .artwork-img {
@@ -9,10 +11,12 @@
     width: 100%;
     object-fit: contain;
     object-position: top;
+    object-position: left;
 }
 
 .p {
   text-align: justify;
+  margin-top: 20px;
 }
 
 .h4 {
