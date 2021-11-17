@@ -10,4 +10,8 @@ end
 
     devise_parameter_sanitizer.permit(:account_update, keys: [:start_time, :end_time])
   end
+
+  def artwork_params
+    params.require(:article).permit(:title, :body, :photo)
+  end
 end
