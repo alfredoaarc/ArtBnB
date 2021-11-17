@@ -1,5 +1,5 @@
-.btn-ghost {
-  color: #4A4A4A;
+.btn-filled {
+  color: #000000;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
@@ -9,5 +9,18 @@
 }
 
 .btn-ghost:hover {
+  opacity: 1;
+}
+
+.btn-outlined {
+  border: 2px solid #000000;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-outlined:hover {
   opacity: 1;
 }
