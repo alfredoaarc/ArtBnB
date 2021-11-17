@@ -15,8 +15,9 @@ User.destroy_all
 puts 'Database cleaned'
 
 user = User.create(
-  email: 'mail@mail.com',
-  password: '123456'
+  email: 'sara@mail.com',
+  password: '123456',
+  name: "sara"
 )
 
 locations = ['Madrid', 'Paris', 'New York', 'Santiago']
