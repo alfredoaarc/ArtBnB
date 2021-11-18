@@ -1,25 +1,12 @@
 
 <div class="container">
   <div class="mt-5">
-  <!-- To Do: Replace erb tag to replace Mo with current user's first name-->
-  <h1>Create a new artwork</h1>
-  <h3>Hey <%= current_user.name %>,</h3>
+    <!-- To Do: Replace erb tag to replace Mo with current user's first name-->
+    <h1>Create a new artwork</h1>
+    <h3>Hey <%= current_user.name %>, tell us about your new piece of art.</h3>
   </div>
 
   <div class="mt-3">
-  <%=render 'search_form', artwork: @artwork %> <a class="btn btn-filled" href="#">See all artworks</a>
-  </div>
-
-<div class="mt-5">
-  <p>These are the artworks that match your search</p>
-
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-    <% @artworks.each do |artwork| %>
-
-    <%= render 'card', artwork: artwork %>
-
-    <% end %>
-
+    <%= render 'create_form', artwork: @artwork %>
   </div>
 </div>

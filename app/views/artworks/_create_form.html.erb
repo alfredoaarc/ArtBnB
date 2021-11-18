@@ -1,9 +1,9 @@
-<%= form_with(model: artwork, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-    <%= form.submit %>
-  </div>
+<%= simple_form_for [artwork] do |f| %>
+  <%= f.input :title, placeholder: 'Artwork title', error: 'Please name your artwork' %>
+  <%= f.input :category, placeholder: 'Choose your city' %>
+  <%= f.input :price, placeholder: '€' %>
+  <%= f.input :location, placeholder: 'Choose your location' %>
+  <%= f.input :description, placeholder: 'Type a short description' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
