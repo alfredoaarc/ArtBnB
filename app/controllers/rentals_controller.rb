@@ -1,6 +1,7 @@
 class RentalsController < ApplicationController
   def new
     @rental = Rental.new
+    @artwork = Artwork.find(params[:artwork_id])
   end
 
   def create
@@ -10,9 +11,8 @@ class RentalsController < ApplicationController
     @rental.user = current_user
     if @rental.save
       redirect_to artwork_path(@artwork), notice: 'Booking complete!'
-
     else
-      render :new
+      render 'artworks/show'
     end
   end
 
