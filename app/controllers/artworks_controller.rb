@@ -7,14 +7,22 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
     @rental = Rental.new
   end
-  # POST /artwork
-  def search
 
+  def new
+    @artwork = Artwork.new
+  end
+
+  def create
+    @artwork = Artwork.new(artworks_params)
+    @artwork.user = current_user
+    @artwork.save
+    #this will load a brand new page
+    redirect_to artwork_path(@artwork)
   end
 
   private
 
-  def artwork_params
+  def artworks_params
     params.require(:artwork).permit(
       :title,
       :description,
