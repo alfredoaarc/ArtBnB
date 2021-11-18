@@ -1,0 +1,12 @@
+
+<% @requests.each do |request| %>
+<div class="card-product">
+  <%= cl_image_tag request.artwork.photo.key %>
+  <div class="card-product-infos">
+    <%= artwork.title.key %>
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+<% end %>

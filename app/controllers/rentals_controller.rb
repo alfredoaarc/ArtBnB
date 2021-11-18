@@ -15,6 +15,7 @@ class RentalsController < ApplicationController
       render :new
     end
   end
+
   def rental_params
     params.require(:rental).permit(:start_time, :end_time)
   end
