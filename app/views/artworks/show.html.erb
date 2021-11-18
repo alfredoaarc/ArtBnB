@@ -7,5 +7,6 @@
   <div class="show-img-box">
     <%= cl_image_tag @artwork.photo.key, class: "artwork-img"%>
   </div>
+</div>
 
 <%= render "rentals/form", artwork: @artwork, rental: @rental %>
