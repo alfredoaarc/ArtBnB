@@ -8,8 +8,8 @@ class ArtworksController < ApplicationController
     @rental = Rental.new
   end
   # POST /artwork
-  def search
 
+  def search
   end
 
   private

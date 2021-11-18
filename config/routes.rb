@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :artworks, only: [:index, :show] do
     resources :rentals, only: [:new, :create]
   end
+  get "requests", to: "pages#requests"
+  get "offers", to: "pages#offers"
 end
