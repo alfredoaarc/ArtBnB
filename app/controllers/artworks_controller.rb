@@ -7,6 +7,7 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
     @rental = Rental.new
   end
+
   # POST /artwork
   def search
 
