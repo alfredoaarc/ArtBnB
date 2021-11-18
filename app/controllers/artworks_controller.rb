@@ -16,7 +16,7 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.new(artworks_params)
     @artwork.user = current_user
     @artwork.save
-    #this will load a brand new page
+    #this will load the newly added artwork page
     redirect_to artwork_path(@artwork)
   end
 
