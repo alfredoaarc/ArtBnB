@@ -1,9 +1,14 @@
-<%= form_with(model: artwork, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-    <%= form.submit %>
-  </div>
+
+<div class="mt-5">
+<%= simple_form_for :search do |f| %>
+    <% locations = ['Madrid', 'Paris', 'New York', 'Santiago']%>
+    <% categories = ['Sculpture', 'Painting', 'Art Installation', 'Immersive Art'] %>
+    <div class="col">
+    <%= f.input :category, placeholder: 'Choose a category', collection: categories, class: 'input-style' %>
+    </div>
+    <div class="col">
+    <%= f.input :location, collection: locations, placeholder: 'Choose your city', class: 'input-style' %>
+    </div>
+    <%= f.button :submit, class: "btn btn-outlined" %>
 <% end %>
+</div>
