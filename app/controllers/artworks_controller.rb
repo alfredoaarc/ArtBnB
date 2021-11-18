@@ -8,6 +8,8 @@ class ArtworksController < ApplicationController
     @rental = Rental.new
   end
 
+
+
   def new
     @artwork = Artwork.new
   end
