@@ -9,7 +9,8 @@ class RentalsController < ApplicationController
     @rental.artwork = @artwork
     @rental.user = current_user
     if @rental.save
-      redirect_to artwork_path(@artwork)
+      redirect_to artwork_path(@artwork), notice: 'Booking complete!'
+
     else
       render :new
     end
