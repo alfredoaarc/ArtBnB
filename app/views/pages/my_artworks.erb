@@ -1,0 +1,10 @@
+<h2>My Artworks</h2>
+  <% @my_artworks.each do |artwork| %>
+  <div class="cardomy-product">
+    <%= cl_image_tag artwork.photo.key %>
+    <div class="cardmy-product-infos">
+      <h1><%= artwork.title %></h1>
+        <h5><%= artwork.description %></h5>
+    </div>
+  </div>
+<% end %>
