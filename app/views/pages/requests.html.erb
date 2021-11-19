@@ -1,25 +1,28 @@
 <div class="container">
-
-<h1>My Requests</h1>
-<% @requests.each do |request| %>
-<div class="card-product">
-  <%= cl_image_tag request.artwork.photo.key %>
-  <div class="card-product-infos">
-    <h1><%= request.artwork.title %></h1>
-      <h5><%= request.artwork.description %></h5>
-  </div>
-</div>
-
-<% end %>
-<h2>My Artworks</h2>
-  <% @my_artworks.each do |artwork| %>
-  <div class="cardoffer-product">
-    <%= cl_image_tag artwork.photo.key %>
-    <div class="cardoffer-product-infos">
-      <h1><%= artwork.title %></h1>
-        <h5><%= artwork.description %></h5>
+  <h1>My Requests</h1>
+  <% @requests.each do |request| %>
+    <div class="card mb-3" style="max-width: 900px;" >
+      <div class="row g-0" style="height: 100%">
+        <div class="col-md-4">
+          <%= cl_image_tag request.artwork.photo.key, class: 'img-fluid rounded-start', id: 'img-card-requests' %>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title"><%= request.artwork.title %></h3>
+            <p class="card-text">Was requested by <%= current_user.name %></p>
+            <p class="card-text"><small class="text-muted">From <%= @requests[0].start_time %></p>
+            <p>to <%= @requests[0].end_time %></small></p>
+            <ul style="list-style: none">
+              <li class="nav-item ml-2 mr-3">
+               <a class="btn btn-primary" href="/requests/">Accept</a>
+              </li>
+             <li class="nav-item active">
+                <a class="nav-link" href="/requests/">Decline</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-<% end %>
-
+  <% end %>
 </div>
