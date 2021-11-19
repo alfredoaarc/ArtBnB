@@ -1,6 +1,19 @@
 class ArtworksController < ApplicationController
   def index
     @artworks = Artwork.all
+    @top_picks = Artwork.all.sample(3)
+    # Search
+    if params[:search].present?
+      if params[:search][:category].present?
+        @artworks = Artwork.search_by_category(params[:search][:category])
+      elsif params[:search][:location].present?
+        @artworks = Artwork.search_by_location(params[:search][:location])
+      else
+        @artworks = @top_picks
+      end
+    else
+      @artworks = Artwork.all
+    end
   end
 
   def show
