@@ -1,10 +1,30 @@
-<h2>My Artworks</h2>
-  <% @my_artworks.each do |artwork| %>
-  <div class="cardomy-product">
-    <%= cl_image_tag artwork.photo.key %>
-    <div class="cardmy-product-infos">
-      <h1><%= artwork.title %></h1>
-        <h5><%= artwork.description %></h5>
-    </div>
+
+<div class="container">
+  <div class="mt-5">
+  <!-- To Do: Replace erb tag to replace Mo with current user's first name-->
+  <h1>Hey <%= current_user.name %>,</h1>
+  <h3>You currently have <strong><%= @my_artworks.count %></strong> artworks published on ArtBnB.</h3>
   </div>
-<% end %>
+
+<div class="mt-5">
+    <p>These are the artworks that match your search.</p>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <% @my_artworks.each do |artwork| %>
+
+    <%= link_to artwork_path(artwork) do %>
+        <div class="card bg-dark text-white" style="background-image: linear-gradient(rgba(0,0,0,0.01),rgba(0,0,0,0.4)), url(<%= cl_image_path artwork.photo.key %>)">
+        <span class="position-absolute badge rounded-pill bg-primary m-1">Currently rented</span>
+          <div class="card-img-overlay d-flex justify-content-between align-items-end">
+              <div>
+              <h4 class="card-title"><%= artwork.title %><h4>
+              <h5 class="card-product-location"><i class="fas fa-map-marker-alt mr-2"></i><%= artwork.location %></h5>
+              </div>
+            <p class="card-text"><span class="card-price"><%= artwork.price %></span>€ / Day</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
