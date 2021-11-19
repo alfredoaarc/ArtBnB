@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 def my_artworks
     @my_artworks = current_user.artworks
-  end
+end
 
 end
 
