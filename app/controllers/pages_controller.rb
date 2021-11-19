@@ -8,20 +8,10 @@ class PagesController < ApplicationController
 
   def requests
     @requests = current_user.rentals
-     #preguntar a que boton conectar y preguntar a cómo contectarlo
+    #preguntar a que boton conectar y preguntar a cómo contectarlo
   end
-def my_artworks
+
+  def my_artworks
     @my_artworks = current_user.artworks
+  end
 end
-
-end
-
-
-
-
-  #preguntar a que boton conectar y preguntar a cómo contectarlo
-
-
-  #create routes request then controller in pages then view
-
-  #preguntar por qué un botón a veces no funciona
