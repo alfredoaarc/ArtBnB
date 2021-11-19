@@ -8,10 +8,16 @@ class PagesController < ApplicationController
 
   def requests
     @requests = current_user.rentals
-    @my_artworks = current_user.artworks
      #preguntar a que boton conectar y preguntar a cómo contectarlo
   end
+def my_artworks
+    @my_artworks = current_user.artworks
 end
+
+end
+
+
+
 
   #preguntar a que boton conectar y preguntar a cómo contectarlo
 
