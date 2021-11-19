@@ -23,3 +23,5 @@ end
 
 
   #create routes request then controller in pages then view
+
+  #preguntar por qué un botón a veces no funciona
