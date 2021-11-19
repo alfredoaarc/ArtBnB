@@ -9,17 +9,19 @@
       <li class="nav-item active"> <!-- to change if we want another type of button! -->
         <a class="nav-link" href="my/artworks/">My Artworks</a>
       </li>
+
       <li class="nav-item active">
         <a class="nav-link" href="/artworks/">Find Artworks</a>
       </li>
+
       <li class="nav-item active">
-        <a class="nav-link" href="/artworks/new">New Artwork</a>
+        <%= link_to "Requests", requests_path, class:"nav-link" %>
       </li>
+
       <li class="nav-item ml-2 mr-3">
         <a class="btn btn-primary" href="/artworks/new">New Artwork</a>
-      <li class="nav-item">
-      <%= link_to "Requests", requests_path, class:"nav-link" %>
       </li>
+
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/novapixels/image/upload/c_scale,h_2604,w_2604/v1637062965/ArtBnB/abdullah-khudabardi-GDg21-_-ryU-unsplash_uealka.jpg" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
