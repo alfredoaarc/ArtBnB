@@ -1,6 +1,6 @@
 
 <div class="mt-5">
-<%= simple_form_for :search do |f| %>
+<%= simple_form_for :search, url: artworks_path, method: :get do |f| %>
     <% locations = ['Madrid', 'Paris', 'New York', 'Santiago']%>
     <% categories = ['Sculpture', 'Painting', 'Art Installation', 'Immersive Art'] %>
     <div class="col">
@@ -9,6 +9,6 @@
     <div class="col">
     <%= f.input :location, collection: locations, placeholder: 'Choose your city', class: 'input-style' %>
     </div>
-    <%= f.button :submit, class: "btn btn-outlined" %>
+    <%= f.submit "Search", class: "btn btn-outlined" %> <a class="btn btn-noborder" href="/artworks/">See all artworks</a>
 <% end %>
 </div>

@@ -21,7 +21,10 @@
   padding: 0.5rem;
 }
 
-
+.card-title {
+  font-size: 28px;
+  font-weight: 500;
+}
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -31,12 +34,34 @@
   align-items: center;
 }
 
-.card-product img {
+.cardomy-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.cardomy-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
 }
 
+
+
+h5.card-product-location {
+  font-weight: 300;
+}
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+span.card-price {
+  font-weight: 500;
+}
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;

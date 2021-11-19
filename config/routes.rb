@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :rentals, only: [:new, :create]
   end
   get "requests", to: "pages#requests"
-  get "offers", to: "pages#offers"
+  get "my-artworks", to: "pages#my_artworks"
+
 end

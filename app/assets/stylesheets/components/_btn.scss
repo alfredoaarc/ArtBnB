@@ -2,12 +2,13 @@
   border: 2px solid #000000;
   color: #000000;
   font-weight: normal;
-  transition: opacity 0.3s ease;
 }
 
 .btn-outlined {
   border: 2px solid #000000;
   font-weight: normal;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+}
+.btn-noborder {
+  border: none;
+  font-weight: normal;
 }
